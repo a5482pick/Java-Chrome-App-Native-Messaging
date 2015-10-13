@@ -4,4 +4,6 @@ It operates as a straight-forward substitute for the file native-messaging-examp
 
 To use the source code, give the 'output.txt' file a path of your choice in the .java code, create Nmeh.jar using e.g. NetBeans, and point to this jar file from com.google.chrome.example.echo.json.  (This JSON file needs to be in your NativeMessagingHosts directory.  For example, mine is in ~/.config/google-chrome/NativeMessagingHosts.  (See repository Python-Chrome-App-Native-Messaging for the required files and further details).  Ensure all files have suitable permissions.
 
+NOTE:  The jar file will not work on other machines because your file output paths will be different to mine.  You should create your own jar file with your own chosen output file's directory.
+
 
