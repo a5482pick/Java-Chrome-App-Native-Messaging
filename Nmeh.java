@@ -12,7 +12,7 @@ public class Nmeh {
     {
       //Prepare a file to save the message that was sent from the Chrome App. 
       BufferedWriter bw = new BufferedWriter(
-             new FileWriter("/home/alex/nativeMessage3/aa/host/output.txt"));
+             new FileWriter("/YOUR_CHOSEN_PATH/output.txt"));
        
       //An infinite loop to keep the connection alive.
       int i =0;
