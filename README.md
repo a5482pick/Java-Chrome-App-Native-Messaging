@@ -1,4 +1,4 @@
-*This works identically the same to the Python-Chrome-App-Native-Messaging repository, except Java is used instead of Python.  It is therefore beneficial to get Python-Chrome-App-Native-Messaging working correctly first.*
+*This repository provides a file to replace one of the files in the Python-Chrome-App-Native-Messaging repository.  It is therefore beneficial to get Python-Chrome-App-Native-Messaging working correctly first.*
 
 A Java program that can communicate both ways with a Chrome App is provided.  (It has been tested with Chromium Browser on a little-endian machine.  You may have to reverse the byte padding, as explained in the code).  The purpose is to demonstrate the basics of the process, and the code has therefore been kept as short and simple as possible.
 
