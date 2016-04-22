@@ -46,7 +46,8 @@ public class Nmeh {
         int returnedMessageLength = 19;
     
         //Tell the app the length of our message.  For simplcity, the length is limited to FF, 
-        //and the last three bytes are manually padded.  For big-endian, pad the zeros first.
+        //and the last three bytes are manually inserted.  (Endianness may mean some machines
+        //need the padding to be inserted first.)
         System.out.write((byte) (returnedMessageLength));
         System.out.write((byte)0);
         System.out.write((byte)0);
