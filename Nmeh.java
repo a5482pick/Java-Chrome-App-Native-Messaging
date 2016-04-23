@@ -45,7 +45,7 @@ public class Nmeh {
         //long (see further down).  For this simple example I manually enter that length. 
         int returnedMessageLength = 19;
     
-        //Tell the app the length of our message.  For simplcity, the length is limited to FF, 
+        //Tell the app the length of our message.  For simplicity, the length is limited to FF, 
         //and the last three bytes are manually inserted.  (Endianness may mean some machines
         //need the padding to be inserted first.)
         System.out.write((byte) (returnedMessageLength));
