@@ -47,7 +47,7 @@ public class Nmeh {
     
         //Tell the app the length of our message.  For simplicity, the length is limited to FF, 
         //and the last three bytes are manually inserted.  (Endianness may mean some machines
-        //need the padding to be inserted first.)
+        //need this padding (the last 3 lines below) to instead be inserted as the first 3 lines.)
         System.out.write((byte) (returnedMessageLength));
         System.out.write((byte)0);
         System.out.write((byte)0);
