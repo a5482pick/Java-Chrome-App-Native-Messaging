@@ -44,11 +44,18 @@ public class Nmeh {
         //Prepare to return a message to the Chrome App.  Our message will be 19 'chars' 
         //long (see further down).  For this simple example I manually enter that length. 
         int returnedMessageLength = 19;
+          
+        //The app assumes that the first 32 bits returned give the message's length.  An 'int' is 32 bits so
+        //returnedMessageLength is of correct size.  However, to demonstrate what's happening, I break the
+        //returned message into 4 'bytes'...
     
         //Tell the app the length of our message.  For simplicity, the length is limited to FF, 
         //and the last three bytes are manually inserted.  (Endianness may mean some machines
-        //need this padding (the last 3 lines below) to instead be inserted as the first 3 lines.)
+        //need this line of code to be written after the next 3 lines.)
         System.out.write((byte) (returnedMessageLength));
+        
+        //3 byte 'padding'.
+        //Endianness of your machine may demand these code lines be inserted before the above line of code.  
         System.out.write((byte)0);
         System.out.write((byte)0);
         System.out.write((byte)0);
