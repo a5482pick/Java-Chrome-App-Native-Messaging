@@ -45,9 +45,8 @@ public class Nmeh {
         //long (see further down).  For this simple example I manually enter that length. 
         int returnedMessageLength = 19;
           
-        //The app assumes that the first 32 bits returned give the message's length.  An 'int' is 32 bits so
-        //returnedMessageLength is of correct size.  However, to demonstrate what's happening, I break the
-        //returned message into 4 'bytes'...
+        //The app assumes that the first 32 bits returned give the message's length.  An 'int' is 32 bits but,
+        //to demonstrate what's happening, I break the returned message into 4 8-bit 'bytes'...
     
         //Tell the app the length of our message.  For simplicity, the length is limited to FF, 
         //and the last three bytes are manually inserted.  (Endianness may mean some machines
