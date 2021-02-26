@@ -45,17 +45,14 @@ public class Nmeh {
         //long (see further down).  For this simple example I manually enter that length. 
         int returnedMessageLength = 19;
           
-        //The app assumes that the first 32 bits returned give the message's length.  An 'int' is 32 bits but,
-        //to demonstrate what's happening, I break the returned message into 4 8-bit 'bytes'...
-    
-        //Next steps are to tell the app the length of our message: 
-        //For simplicity, the message's length is limited to 7F (NOT FF, because 'bytes' use two's complement notation).
-          
-        //(Endianness may require this line of code to be written after (rather than before) the 3 lines that follow it.)
+        //The app assumes that the first 32 bits returned give the message's length.
+        //I break the returned message into 4 lots of 8-bits, to demonstrate.
+        //(Endianness may require this line of code to be written after the 3 lines that follow it.)
         System.out.write((byte) (returnedMessageLength));
         
-        //3 byte 'padding'.
-        //Endianness of your machine may demand these code lines be instead inserted before the above line of code.  
+        //3 byte 'padding'.  The length of the returned message is limited in this simple demonstration,
+        //so different returned message lengths may require different amounts of padding.
+        //Additionally, endianness may demand these code lines be inserted before the above line of code.  
         System.out.write((byte)0);
         System.out.write((byte)0);
         System.out.write((byte)0);
