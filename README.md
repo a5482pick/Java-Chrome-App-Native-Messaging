@@ -1,6 +1,6 @@
-*This repository provides a file to replace one of the files in the Python-Chrome-App-Native-Messaging repository.  It is therefore beneficial to get Python-Chrome-App-Native-Messaging working correctly first.*
+*This repository provides a file to replace one of the files in the Python-Chrome-App-Native-Messaging repository.  It's therefore beneficial to get Python-Chrome-App-Native-Messaging working correctly first.*
 
-A Java program that can communicate both ways with a Chrome App is provided.  (It has been tested with Chromium Browser. Note that endianness may be significant: byte order *may* need reversing for some users).  The purpose is to demonstrate the basics of the process, and the code has therefore been kept as short and simple as possible.
+A Java program that can communicate both ways with a Chrome App is provided.  It's been tested with Chromium Browser.  The amount of byte padding of the 32-bits for the returned message length will here depend on the length of the message that you're returning, so adjust padding amount if required.  The order of the padding will also depend on endianness, so some machines will require the padding to come before the returned message-length's value. 
 
 (This Java transformation is motivated by: https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/nativeMessaging/host/).
 
